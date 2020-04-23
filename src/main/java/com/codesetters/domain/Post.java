@@ -2,6 +2,8 @@ package com.codesetters.domain;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.UUID;
 
 public class Post implements Serializable {
@@ -12,15 +14,9 @@ public class Post implements Serializable {
 
     private String publisher;
 
-    private Instant createdat;
+    private Date createdat;
 
-    public Instant getCreatedat() {
-        return createdat;
-    }
-
-    public void setCreatedat(Instant createdat) {
-        this.createdat = createdat;
-    }
+    private LocalDate scrapedOn;
 
     public UUID getId() {
         return id;
@@ -53,5 +49,21 @@ public class Post implements Serializable {
                 ", title='" + title + '\'' +
                 ", publisher='" + publisher + '\'' +
                 '}';
+    }
+
+    public Date getCreatedat() {
+        return createdat;
+    }
+
+    public void setCreatedat(Date createdat) {
+        this.createdat = createdat;
+    }
+
+    public LocalDate getScrapedOn() {
+        return scrapedOn;
+    }
+
+    public void setScrapedOn(LocalDate scrapedOn) {
+        this.scrapedOn = scrapedOn;
     }
 }
