@@ -18,6 +18,8 @@ public class Post implements Serializable {
 
     private LocalDate scrapedOn;
 
+    private String postType;
+
     public UUID getId() {
         return id;
     }
@@ -65,5 +67,13 @@ public class Post implements Serializable {
 
     public void setScrapedOn(LocalDate scrapedOn) {
         this.scrapedOn = scrapedOn;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
     }
 }
