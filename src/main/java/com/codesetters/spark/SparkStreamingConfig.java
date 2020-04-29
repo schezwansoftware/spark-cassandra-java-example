@@ -11,9 +11,9 @@ public class SparkStreamingConfig {
     public JavaStreamingContext connect() {
         SparkConf sparkConf = new SparkConf();
         sparkConf.setAppName("WordCountingApp");
-        sparkConf.setMaster("spark://192.168.29.203:7077");
+        sparkConf.setMaster("local[2]");
         sparkConf.setAppName("com.codesetters.spark.Main");
-        sparkConf.set("spark.cassandra.connection.host", "192.168.29.203");
+        sparkConf.set("spark.cassandra.connection.host", "192.168.43.112");
         this.jssc = new JavaStreamingContext(sparkConf, Durations.seconds(5));
         return jssc;
     }

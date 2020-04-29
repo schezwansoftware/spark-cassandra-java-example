@@ -19,6 +19,10 @@ public class PublisherPostStats implements Serializable {
 
     private String posttype;
 
+    private Integer year;
+
+    private Integer month;
+
     public String getPublishername() {
         return publishername;
     }
@@ -38,11 +42,13 @@ public class PublisherPostStats implements Serializable {
     public PublisherPostStats() {
     }
 
-    public PublisherPostStats(LocalDate updateddate, String publishername, Integer totalcount,String posttype) {
+    public PublisherPostStats(LocalDate updateddate, String publishername, Integer totalcount,String posttype,Integer year,Integer month) {
         this.updateddate = updateddate;
         this.publishername = publishername;
         this.totalcount = totalcount;
         this.posttype = posttype;
+        this.month = month;
+        this.year = year;
     }
 
     public LocalDate getUpdateddate() {
@@ -59,6 +65,8 @@ public class PublisherPostStats implements Serializable {
                 ", publishername='" + publishername + '\'' +
                 ", totalcount='" + totalcount + '\'' +
                 ", posttype='" + posttype + '\'' +
+                ", year='" + year + '\'' +
+                ", month='" + month + '\'' +
                 '}';
     }
 
@@ -68,5 +76,21 @@ public class PublisherPostStats implements Serializable {
 
     public void setPosttype(String posttype) {
         this.posttype = posttype;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
+
+    public Integer getMonth() {
+        return month;
+    }
+
+    public void setMonth(Integer month) {
+        this.month = month;
     }
 }

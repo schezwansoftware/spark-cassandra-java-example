@@ -31,7 +31,6 @@ public class WordCount {
 
 // Print the first ten elements of each RDD generated in this DStream to the console
         wordCounts.print();
-
         jssc.start();
         jssc.awaitTermination();
     }

@@ -135,6 +135,8 @@
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.0.33.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec:4.0.33.Final" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:16.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:2.4.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming-kafka-0-10_2.11:2.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-client:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-common:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.2" level="project" />
