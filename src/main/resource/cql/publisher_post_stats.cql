@@ -17,3 +17,13 @@ CREATE TABLE ritam.publisherpoststats_by_month (
     year int,
     PRIMARY KEY ((year,month),posttype, publishername)
 ) WITH CLUSTERING ORDER BY (posttype ASC ,publishername ASC);
+
+CREATE TABLE ritam.publisherpoststats_by_year (
+    updateddate date,
+    totalcount int,
+    publishername text,
+    posttype text,
+    month int,
+    year int,
+    PRIMARY KEY (year,posttype, publishername)
+) WITH CLUSTERING ORDER BY (posttype ASC ,publishername ASC);

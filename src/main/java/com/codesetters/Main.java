@@ -52,6 +52,11 @@ public class Main {
                 "publisherpoststats_by_month",
                 CassandraJavaUtil.mapToRow(PublisherPostStats.class))
                 .saveToCassandra();
+        CassandraJavaUtil.javaFunctions(publisherPostStatsJavaRDD).writerBuilder(
+                "ritam",
+                "publisherpoststats_by_year",
+                CassandraJavaUtil.mapToRow(PublisherPostStats.class))
+                .saveToCassandra();
 
     }
 
